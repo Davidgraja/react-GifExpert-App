@@ -24,7 +24,6 @@ h2 {
 
 h3 {
     font-size: 3rem;
-    margin-bottom: 5px;
 }
 
 .card-grid {
@@ -61,3 +60,20 @@ h3 {
 .card img {
     width: 100%;
 }
+
+.container-title-button{
+    display: flex;
+    align-items:center ;
+    gap:  20px;
+}
+
+.container-title-button button {
+    background-color: red;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: white;
+}
+
+.container-title-button button:hover {
+    transform: scale(1.01 , 1.01);}

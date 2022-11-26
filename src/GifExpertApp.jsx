@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory , GifGrid } from "./components";
 
 export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['One Punch']);
@@ -11,6 +10,12 @@ export const GifExpertApp = () => {
 
         setCategories(cat => [newCategory ,...cat]);
         
+    }
+
+    const deleteCategory = (deleteValue) =>{
+        const index = categories.indexOf(deleteValue);
+        categories.splice(index, 1)
+        setCategories([...categories])
     }
 
     return (
@@ -31,7 +36,7 @@ export const GifExpertApp = () => {
             { 
                 categories.map(category => 
                     (
-                        <GifGrid key={ category } category={ category }/>
+                        <GifGrid key={ category } category={ category }  onDeleteCategory ={ (value) =>deleteCategory(value) } />
                     )
                 )
             

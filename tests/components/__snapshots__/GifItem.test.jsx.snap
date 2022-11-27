@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas sobre el componente GifItem hacer la evaluacion frente el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="god of war"
+      src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
+    />
+    <p>
+      god of war
+    </p>
+  </div>
+</div>
+`;

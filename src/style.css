@@ -7,6 +7,24 @@ body {
     padding: 60px;
 }
 
+.container-links{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.container-links figure{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-links figure a{   
+    font-size: 2rem;
+}
 input {
     background-color: white;
     border-radius: 5px;
@@ -16,6 +34,7 @@ input {
     outline: none;
     padding: 10px 15px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -68,12 +87,25 @@ h3 {
 }
 
 .container-title-button button {
-    background-color: red;
+    background-color: white;
     padding: 8px;
-    border: 1px solid black;
-    border-radius: 8px;
-    color: white;
+    border : 1px solid gray;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 .container-title-button button:hover {
-    transform: scale(1.01 , 1.01);}
+    transform: scale(1.01 , 1.01);
+    color: white;
+    background-color: #FB8170 ;
+}
+
+.btn-submit{
+    min-width: 100px;
+    max-width: 20%;
+}
+
+.btn-submit:hover{
+    background-color: rgb(97, 32, 158) ;
+    color: white;
+}

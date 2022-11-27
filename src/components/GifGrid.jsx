@@ -2,8 +2,8 @@ import { GifItem } from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 
 
-export const GifGrid = ({ category , onDeleteCategory }) => {
-    const {images , isLoading} = useFetchGifs(category);
+export const GifGrid = ({ category , onDeleteCategory , amount}) => {
+    const {images , isLoading} = useFetchGifs(category , amount);
 
     const eventDelete = (e) =>{
         const category = e.nativeEvent.path[1].childNodes[0].innerText

@@ -4,6 +4,7 @@ esta app consume la api de [GIPHY](https://developers.giphy.com/) , la cual sumi
 
 ### Tecnologias usadas :
 Para el desarrollo de esta app se  han  usado las siguientes tecnologias:
+- [node](https://nodejs.org/en/)
 - [React 18](https://es.reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [Jest](https://jestjs.io/es-ES/)

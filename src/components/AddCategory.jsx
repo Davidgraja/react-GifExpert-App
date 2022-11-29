@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from "prop-types";
 
 export function AddCategory({onNewCategory , onChangeAmountGif}) {
 
@@ -21,7 +22,7 @@ export function AddCategory({onNewCategory , onChangeAmountGif}) {
         onNewCategory(valueInput);
         onChangeAmountGif(valueAmount);
         setInputValue('');
-        setAmout("");
+        setAmout('');
         
     }
 
@@ -33,13 +34,15 @@ export function AddCategory({onNewCategory , onChangeAmountGif}) {
     
 
     return (
-        <form onSubmit={ onSubmitEvent }>
+        <form onSubmit={ onSubmitEvent } aria-label="form" >
 
             <input 
                 type="text" 
                 placeholder='Buscar gifs'
                 value={ inputValue }
                 onChange={ onInputChange }
+                data-testid = 'categoryInput'
+                
             />
 
             <input 
@@ -49,11 +52,18 @@ export function AddCategory({onNewCategory , onChangeAmountGif}) {
                 placeholder={'Cantidad'}
                 value={ amout }
                 onChange={ onAmoutChange }
+                data-testid = 'amountInput'
             />
             
             <input type="submit" value={'Buscar'} className="btn-submit" />
-            {/* <button type='submit' ></button> */}
+            
 
         </form>
     )
+}
+
+
+AddCategory.propTypes = {
+    onNewCategory : PropTypes.func.isRequired,
+    onChangeAmountGif : PropTypes.func.isRequired
 }

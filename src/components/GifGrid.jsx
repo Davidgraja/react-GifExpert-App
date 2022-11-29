@@ -45,5 +45,5 @@ export const GifGrid = ({ category , onDeleteCategory , amount}) => {
 GifGrid.propTypes = {
     category : PropTypes.string.isRequired,
     onDeleteCategory : PropTypes.func.isRequired,
-    amount : PropTypes.number.isRequired
+    amount : PropTypes.string.isRequired
 }

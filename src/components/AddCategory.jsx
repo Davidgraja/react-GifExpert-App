@@ -16,6 +16,7 @@ export function AddCategory({onNewCategory , onChangeAmountGif}) {
         event.preventDefault();
         const valueInput = inputValue.trim()
         const valueAmount = amout.trim()
+        
         if(valueInput.length <=1) return;
         if(valueAmount <=0) return;
         

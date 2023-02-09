@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes, { element } from 'prop-types'
 
 import { GifItem } from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
@@ -7,8 +7,7 @@ import { useFetchGifs } from "../hooks/useFetchGifs";
 export const GifGrid = ({ category , onDeleteCategory , amount}) => {
     const {images , isLoading} = useFetchGifs(category , amount);
 
-    const eventDelete = (e) =>{
-        const category = e.nativeEvent.path[1].childNodes[0].innerText
+    const eventDelete = () =>{
         onDeleteCategory( category )
     }
 
